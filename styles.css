@@ -1,0 +1,33 @@
+html {
+	background-color: #F4EBD0;
+}
+
+* {
+	margin: 0;
+}
+
+.the-container {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+}
+
+.the-container>div {
+	width: 40vw;
+}
+
+.the-container h1 {
+	margin: 80px 0px;
+	font-size: 100px;
+	color: #122620;
+}
+
+.the-container h2 {
+	margin: 15px 0px;
+	font-size: 60px;
+	color: #7d602c;
+}
+
+.the-container p {
+	font-size: 25px;
+}

@@ -1,0 +1,23 @@
+I will use SQL to store word of the days, using the date, word, example, word_translation, example_translation, id.
+
+There will be a script "get_word_of_day.php" that will get word from list "3000.txt" using RNG, see if it has been used yet,
+by querying the database, then making a new entry to the database.
+
+The main file "index.php" will display the current word of the day, by querying the database for the latest.
+
+I will use a cron job (scheduled task) to run "get_word_of_day.php" every day at a certain time.
+
+The main file "index.php" (front end) will refresh every set amount of time, in order to update when the new word comes in.
+
+CREATE TABLE words (
+	date DATE,
+	word VARCHAR(50),
+	word_translation VARCHAR(50),
+	example VARCHAR(255),
+	example_translation VARCHAR(255),
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY
+);
+
+
+$query = "INSERT INTO words (date, word, word_translation, example, example_translation, id)
+VALUES ($date, $word, $word_translation, $example, $example_translation, $id);"
