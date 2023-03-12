@@ -21,3 +21,6 @@ CREATE TABLE words (
 
 $query = "INSERT INTO words (date, word, word_translation, example, example_translation, id)
 VALUES ($date, $word, $word_translation, $example, $example_translation, $id);"
+
+the cron job (crontab -e)
+0 0 * * * su root -c "/usr/bin/php -f /var/www/html/get_word.php >> /var/www/html/log.txt 2>&1"
